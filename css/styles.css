@@ -1,0 +1,160 @@
+
+/* Resets */
+
+* {
+    box-sizing:inherit
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    font-family: x;
+    line-height: 1.67;
+
+}
+
+img {
+    max-width:100%;
+    display:block;
+    height:auto;
+}
+
+main {
+    background-color: aliceblue;
+    padding-block:3rem;
+}
+
+.container {
+    width:min(64rem,90%);
+    margin-inline:auto;
+}
+
+/* common Classes */
+
+section+section {
+    padding-top: 3rem;
+}
+.section__title {
+    margin-bottom: 2.5rem;
+
+}
+
+.grid {
+    display:grid;
+    gap:var(--gap,1rem);
+}
+
+.split {
+    gap: var(--split-gap,1rem);
+    display:flex;
+    flex-direction: column;
+}
+
+
+/* header */
+
+header {
+    background-color: blue;
+    color:white;
+    padding-block: 3rem;
+}
+
+nav {
+    flex-direction: column;
+align-items: center;}
+
+.nav__list {
+    list-style: none;
+    padding-left: initial;
+    --split-gap:1px;
+}
+
+.nav__link {
+    color:inherit;
+    font-size: inherit;
+    text-decoration: initial;
+    display: block;
+    padding:.75em 1em;
+    background-color: rgb(157, 214, 236);
+    text-align: center;
+}
+
+.profile-link {
+    margin-top: 2rem;
+    border-radius: 50%;
+}
+
+/* top players */
+
+.player {
+    align-items: center;
+    --split-gap:0;
+}
+
+.players.grid {
+    --gap:1.5rem
+}
+
+.player__img {
+    width: 35%;
+}
+
+/* top blog */
+
+.blog__title {
+    margin-bottom: 0;
+}
+
+.info p {
+    margin-top: 0;
+}
+
+/* Courses */
+.courses {
+    --split-gap:2rem
+}
+.course {
+     padding:1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px hsl(0, 0%, 95%),-5px -5px 10px hsl(0, 0%, 95%);
+}
+.course__details {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:1rem
+}
+
+.course__duration  {
+    background-color: orangered;
+padding:.75em;
+border-radius: 2rem;
+}
+
+
+.course__duration p {
+    margin:0;
+    line-height: 1;
+}
+
+
+@media only screen and (min-width:48rem) {
+header .split > * {
+    flex:1;
+}
+    nav {
+        justify-content: space-between;
+    }
+
+    .profile-img
+    {
+        
+        
+    }
+    .split {
+        flex-direction: row;
+    }
+}
